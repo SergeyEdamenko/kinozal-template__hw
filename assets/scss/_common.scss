@@ -1,0 +1,17 @@
+@use "presets" as *;
+@use "mixsins" as *;
+html {
+  font-size: $font-size;
+}
+body {
+  font-size: $font-size;
+  font-family: $font-main;
+}
+a {
+  color: $color-primary;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $color-accent;
+  }
+}
