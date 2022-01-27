@@ -2,6 +2,7 @@
 @use "mixsins" as *;
 
 .header {
+  margin-bottom: $gap-xl;
 }
 
 .header-logo {

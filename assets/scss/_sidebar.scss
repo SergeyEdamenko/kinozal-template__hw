@@ -1,2 +1,5 @@
 @use "presets" as *;
 @use "mixsins" as *;
+.left-sidebar {
+  margin-bottom: $gap-xl;
+}
