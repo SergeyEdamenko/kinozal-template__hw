@@ -14,17 +14,18 @@
         text-align: center;
       }
 
-      &a:focus,
-      &a:hover {
+      &:focus,
+      &:hover {
         background-color: $color-primary;
       }
     }
-    > a:hover {
+
+    > .active > a {
       background-color: $color-primary-dark;
 
       &:focus,
       &:hover {
-        background-color: $color-accent-light;
+        background-color: $color-primary-light;
       }
     }
   }
@@ -33,22 +34,27 @@
 .navbar-left {
   @include sm-min {
     margin-bottom: 0;
+
     > li {
       margin: 5px 5px 5px 0;
     }
   }
 }
+
 .navbar-right {
   @include sm-min {
     margin-top: 0;
+
     > li {
       margin: 5px 0 5px 5px;
     }
   }
 }
+
 .navbar-header {
   text-align: center;
 }
+
 .navbar-toggle {
   float: none;
   margin-right: 0;
