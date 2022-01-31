@@ -65,12 +65,13 @@
 
   <div class="container">
     <div class="row">
-      <div class="main col-lg-9 col-lg-push-3 col-md-8 col-lg-push-4">
+      <div class="main col-md-9 col-md-push-3 col-md-8 col-md-push-4">
+
 
       </div>
 
 
-      <div class="left-sidebar col-lg-3 col-lg-pull-9 col-md-4 col-lg-pull-8">
+      <div class="left-sidebar col-md-3 col-md-pull-9 col-md-4 col-md-pull-8">
 
         <div class="vertical-slder__image panel panel-info">
           <div class="carousel slide" data-ride="carousel" id="vertical-carousel">
@@ -109,18 +110,74 @@
         <div class="site-search panel panel-info">
           <div class="panel-heading">Поиск</div>
           <div class="panel-body">
-            Panelcontent
+            <form action="search">
+              <div class="input-group input-group-lg">
+                <input class="form-control" type="text" placeholder="Поиск по сайту">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"
+                      aria-hidden="true"></span>
+                  </button>
+                </span>
+              </div>
+            </form>
           </div>
         </div>
 
         <div class="user-login panel panel-info">
           <div class="panel-heading">Пользователь</div>
           <div class="panel-body">
-            Panelcontent
+            <div>
+              <!-- Nav tabs -->
+              <ul class="user-login__tabs nav nav-tabs" role="tablist">
+                <li class="active" role="presentation">
+                  <a href="#user-login-sidebar" data-toggle="tab" aria-controls="user-login-sidebar" role="tab">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="#user-registration-sidebar" data-toggle="tab" aria-controls="user-registration-sidebar"
+                    role="tab">
+                    <span class="glyphicon glyphicon-user"></span>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+
+                <div class="tab-pane fade in active" role="tabpanel" id="user-login-sidebar">
+                  <form action="login">
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="text" placeholder="Логин">
+                    </div>
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="text" placeholder="Пароль">
+                    </div>
+                    <button class="btn btn-default btn-lg btn-block">Вход</button>
+                  </form>
+                </div>
+
+
+                <div class="tab-pane fade" role="tabpanel" id="user-registration-sidebar">
+                  <form action="register">
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="text" placeholder="Логин">
+                    </div>
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="text" placeholder="Пароль">
+                    </div>
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="email" placeholder="Email">
+                    </div>
+                    <button class="btn btn-default btn-lg btn-block">Регистрация</button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="site-news panel panel-info">
+        <div class="user-login panel panel-info">
           <div class="panel-heading">Новости сайта</div>
           <div class="panel-body">
             Panelcontent
@@ -133,13 +190,18 @@
             Panelcontent
           </div>
         </div>
-
       </div>
+
     </div>
+
   </div>
 
+
+
+
   <!--footer-->
-  <script src="libs/jquery/dist/jquery.min.js"></script>
+  <script src=" libs/jquery/dist/jquery.min.js">
+  </script>
   <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
