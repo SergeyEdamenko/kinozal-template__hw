@@ -58,10 +58,15 @@
   font-size: 0.875rem;
 }
 
-.thumbnail {
+.thumbnail:hover {
   -webkit-transition: background-color 0.25s;
   -o-transition: background-color 0.25s;
   transition: background-color 0.25s;
+  border-color: #df8a13;
+  background-color: #df8a13;
+}
+.thumbnail:hover:hover h3 {
+  color: #ffffff;
 }
 
 html {
@@ -80,6 +85,41 @@ a {
 a:hover, a:focus {
   text-decoration: none;
   color: #df8a13;
+}
+
+h1 {
+  font-family: "PT Serif", serif;
+}
+h1::after {
+  position: absolute;
+  width: 100%;
+  margin: 0.85em 0 0 15px;
+  content: "";
+  border-bottom: 3px solid #f0ad4f;
+}
+
+h2 {
+  font-family: "PT Serif", serif;
+}
+h2::before {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  margin: 0.25em 0 0 0;
+  content: "";
+  border-bottom: 3px solid #f0ad4f;
+}
+h2::after {
+  position: absolute;
+  width: 100%;
+  margin: 0.85em 0 0 15px;
+  content: "";
+  border-bottom: 3px solid #f0ad4f;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
 }
 
 .header {
@@ -103,7 +143,7 @@ a:hover, a:focus {
 }
 .header-logo__description {
   display: block;
-  letter-spacing: 0.2 em;
+  letter-spacing: 0.2em;
   color: #ffffff;
   font-size: 1.15rem;
 }
@@ -118,68 +158,48 @@ a:hover, a:focus {
   margin-bottom: 60px;
 }
 
-.new-films {
-  position: relative;
-  overflow: hidden;
-}
-.new-films-row {
+.new-films-row,
+.top-week-row {
   margin-right: -7.5px;
   margin-bottom: -15px;
   margin-left: -7.5px;
 }
-.new-films-item {
+.new-films-item,
+.top-week-item {
   margin-bottom: 15px;
   padding-right: 7.5px;
   padding-left: 7.5px;
 }
-.new-films-item__thumbnail {
+.new-films-item__thumbnail,
+.top-week-item__thumbnail {
   margin-bottom: 0;
 }
-.new-films-item__image {
+.new-films-item__image,
+.top-week-item__image {
   width: 100%;
 }
-.new-films-item__title {
-  display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-}
-
-h1 {
-  font-size: 48px;
-  line-height: 92px;
-  color: #333333;
-  font-weight: 400;
-  font-family: "PT Serif";
-}
-h1::after {
-  position: absolute;
-  width: 100%;
-  margin: 0.85em 0 0 15px;
-  content: "";
-  border-bottom: 3px solid #f0ad4f;
-}
-
-.new-films-item__caption {
-  text-align: center;
-}
-.new-films-item__title {
-  display: block;
-  overflow: hidden;
+.new-films-item__title,
+.top-week-item__title {
   margin: 0;
-  white-space: nowrap;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
   font-size: 1rem;
   font-weight: bold;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
-
-.thumbnail:hover {
+.new-films-item__caption,
+.top-week-item__caption {
+  text-align: center;
+}
+.new-films-item:hover .thumbnail,
+.top-week-item:hover .thumbnail {
   border-color: #df8a13;
   background-color: #df8a13;
 }
-.thumbnail:hover:hover h3 {
+.new-films-item:hover h3,
+.top-week-item:hover h3 {
   color: #ffffff;
 }
 
@@ -304,6 +324,17 @@ h1::after {
           transform: translateY(-50%);
 }
 @media (min-width: 576px) {
+  h1 {
+    margin: -9.99999999px 0 1em;
+    font-size: 3rem;
+  }
+  h2 {
+    margin: 60px 0 45px 45px;
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
   .header-logo__title {
     font-size: 3.5rem;
   }
@@ -331,6 +362,17 @@ h1::after {
   }
 }
 @media (max-width: 575.8px) {
+  h1 {
+    margin: 0 0 1em;
+    font-size: 2rem;
+  }
+  h2 {
+    margin: 45px 0 30px 45px;
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
   .header-logo__title {
     font-size: 2.5rem;
   }

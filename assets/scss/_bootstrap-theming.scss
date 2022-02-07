@@ -93,6 +93,13 @@
   }
 }
 
-.thumbnail {
+.thumbnail:hover {
   transition: background-color 0.25s;
+
+  border-color: #df8a13;
+  background-color: #df8a13;
+
+  &:hover h3 {
+    color: #ffffff;
+  }
 }
