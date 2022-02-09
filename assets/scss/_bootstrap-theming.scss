@@ -74,16 +74,17 @@
   }
   > .panel-heading {
     list-style: 0.8em;
-    background-color: $color-accent;
+
     color: $color-white;
     border: none;
+    background-color: $color-accent;
 
     font-size: 1.25rem;
   }
 }
 .panel-body {
-  border-radius: 0 0 4px 4px;
   border: 1px solid $color-gray;
+  border-radius: 0 0 4px 4px;
 }
 .input {
   &-lg,

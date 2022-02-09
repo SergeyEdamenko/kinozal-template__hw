@@ -60,6 +60,7 @@
   &-item {
     .thumbnail {
       margin-bottom: 0;
+
       transition: background-color 0.25s;
     }
     &__image {
@@ -69,8 +70,9 @@
       text-align: justify;
     }
     &__button {
-      margin-bottom: $gap * 2;
       float: right;
+
+      margin-bottom: $gap * 2;
     }
     &:hover {
       .thumbnail {
@@ -120,14 +122,15 @@
     &__button {
       float: right;
 
-      transition: background-color 0.25s;
       margin-bottom: $gap * 2;
+
+      transition: background-color 0.25s;
     }
 
     &:hover {
       .thumbnail {
-        background-color: $color-accent;
         border-color: $color-accent;
+        background-color: $color-accent;
       }
 
       h3 > a {

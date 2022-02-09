@@ -2,9 +2,10 @@
 @use "mixins" as *;
 
 .footer {
-  background-color: $color-dark;
   padding-top: $gap * 3;
+
   color: $color-gray;
+  background-color: $color-dark;
 
   a {
     color: $color-gray-dark;
@@ -15,7 +16,8 @@
   }
 
   ul {
-    list-style: none;
     padding: 0;
+
+    list-style: none;
   }
 }
