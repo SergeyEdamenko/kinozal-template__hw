@@ -1,2 +1,21 @@
 @use "presets" as *;
 @use "mixins" as *;
+
+.footer {
+  background-color: $color-dark;
+  padding-top: $gap * 3;
+  color: $color-gray;
+
+  a {
+    color: $color-gray-dark;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}

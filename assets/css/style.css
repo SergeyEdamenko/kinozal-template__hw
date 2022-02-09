@@ -77,6 +77,7 @@ body {
   overflow-y: scroll;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
+  max-width: 100%;
 }
 
 a {
@@ -104,8 +105,8 @@ h2 {
 h2::before {
   position: absolute;
   left: 0;
-  width: 30px;
   margin: 0.25em 0 0 0;
+  width: 30px;
   content: "";
   border-bottom: 3px solid #f0ad4f;
 }
@@ -195,8 +196,8 @@ section {
 }
 .new-films-item:hover .thumbnail,
 .top-week-item:hover .thumbnail {
-  border-color: #df8a13;
   background-color: #df8a13;
+  border-color: #df8a13;
 }
 .new-films-item:hover h3,
 .top-week-item:hover h3 {
@@ -218,6 +219,9 @@ section {
 .news-film-item__button {
   float: right;
   margin-bottom: 30px;
+  -webkit-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
 }
 .news-film-item:hover .thumbnail {
   border-color: #df8a13;
@@ -354,6 +358,22 @@ section {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.footer {
+  padding-top: 45px;
+  background-color: #232323;
+  color: #d5d5d5;
+}
+.footer a {
+  color: #6f6f6f;
+}
+.footer a:hover {
+  color: #ffffff;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
 }
 @media (min-width: 576px) {
   h1 {
