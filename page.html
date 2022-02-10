@@ -4,13 +4,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>КиноЗал</title>
   <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap"
-        rel="stylesheet">
+    rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
   <!--[if lt IE 9]>
@@ -20,11 +19,461 @@
 </head>
 
 <body>
+  <header class="header">
+    <div class="header-logo">
+      <div class="container">
+        <a href="/">
+          <strong class="header-logo__title">КиноЗал</strong>
+          <span class="header-logo__description">Найди свое кино</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="header-menu">
+      <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top"
+              aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbar-top">
+            <ul class="nav navbar-nav navbar-left">
+              <li class="active"><a href="#">Главная</a></li>
+              <li><a href="#">Фильмы</a></li>
+              <li><a href="#">Сериалы</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Новинки</a></li>
+              <li><a href="#">Рейтинг</a></li>
+              <li><a href="#">Раздачи</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <main class="main col-lg-9 col-lg-push-3 col-md-8 col-md-push-4">
+
+        <section class="site-search panel panel-info visible-sm visible-xs">
+          <div class="panel-heading">Поиск</div>
+          <div class="panel-body">
+            <form action="search">
+              <div class="input-group input-group-lg">
+                <input class="form-control" type="text" placeholder="Поиск по сайту">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"
+                      aria-hidden="true"></span>
+                  </button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="user-login panel panel-info visible-sm visible-xs">
+          <div class="panel-heading">Пользователь</div>
+          <div class="panel-body">
+            <div>
+              <ul class="user-login__tabs nav nav-tabs" role="tablist">
+                <li class="active" role="presentation">
+                  <a href="#user-login-main" data-toggle="tab" aria-controls="user-login-main" role="tab">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="#user-registration-main" data-toggle="tab" aria-controls="user-registration-main" role="tab">
+                    <span class="glyphicon glyphicon-user"></span>
+                  </a>
+                </li>
+              </ul>
 
 
-<script src="libs/jquery/dist/jquery.min.js"></script>
-<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+              <div class="user-login__content tab-content">
+                <div class="tab-pane fade in active" id="user-login-main" role="tabpanel">
+                  <form action="login">
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="text" placeholder="Логин">
+                    </div>
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="text" placeholder="Пароль">
+                    </div>
+                    <button class="btn btn-default btn-lg btn-block">Вход</button>
+                  </form>
+                </div>
+
+
+                <div class="tab-pane fade" role="tabpanel" id="user-registration-main">
+                  <form action="register">
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="text" placeholder="Логин">
+                    </div>
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="text" placeholder="Пароль">
+                    </div>
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="email" placeholder="Email">
+                    </div>
+                    <button class="btn btn-default btn-lg btn-block">Регистрация</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="film-info">
+          <h1>Гарри Поттер и узник Азкабана</h1>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://youtu.be/IB7OXZ6WkzQ"></iframe>
+          </div>
+          <div class="film-info__well well text-center">
+            <span class="film-info__wrapper">Год:<span film-info__badge badge></span></span>
+            <span class="film-info__wrapper">Рейтинг:<span> 8,8</span></span>
+            <span class="film-info__wrapper">Режиссер:<span>Альфонсо Куарон</span></span>
+          </div>
+        </section>
+
+        <section class="film-description">
+          <h2>Описание фильма</h2>
+          <div class="well">
+            В третьей части экранизации бестселлера о юном волшебнике, полюбившиеся всем герои — Гарри Поттер, Рон и
+            Гермиона — возвращаются уже на третий курс школы чародейства и волшебства «Хогвартс». На этот раз они должны
+            раскрыть тайну узника, сбежавшего из зловещей тюрьмы Азкабан, чье пребывание на воле создает для Гарри
+            смертельную опасность…
+          </div>
+        </section>
+
+        <section class="film-comments">
+          <h2>Отзывы о фильме</h2>
+          <div class="panel panel-info">
+            <div class="panel-heading"><span class="glyphicon glyphicon-user"></span><span>Максим Исаенко</span></div>
+            <div class="panel-body">
+              Гарри Поттер путешествует во времени «Узник Азкабана» — единственная часть поттерианы, в которой Гарри не
+              встречается с Тем-о-ком-нелья-говорить, а вместо этого почти весь фильм собирается на битву с новым другом
+              Сириусом Блэком. Экранизации — вещь неблагодарная. Всегда найдутся ценители первоисточника, которые будут
+              недовольны подбором актеров, декорациями и сценарием. Фильмы про Гарри Поттера, пожалуй, одни из немногих,
+              которые имеют столько же поклонников, сколько книги про маленького волшебника. «Гарри Поттер и узник
+              Азкабана» — третий фильм поттерианы, который многие считают переломным. После первых двух фильмов, снятых
+              Крисом Коламбусом, было решено пригласить Альфонсо Куарона. Помимо гениального но «взрослого» фильма
+              «Маленькая принцесса», которые почему-то вспоминают гораздо реже. Смена режиссера подразумевает другой
+              взгляд на экранизацию, и, действительно, «Узник Азкабана» получился более мрачным и не таким детским, как
+              две предыдущих серии; при этом Куарону удалось создать завораживающий, держащий в напряжении, но сказочный
+              и
+              фантазийный фильм. Новое видение Куарона выразилось еще и в операторской работе — постоянно двигающаяся
+              камера, благодаря которой зритель перемещается не только в пространстве, но и во времени. Спецэффекты в
+              «Узнике Азкабана» тоже на высоте — создателям удалось сделать так, чтобы волшебные, «ненастоящие»
+              персонажи
+              двигались как живые; чего стоят только гиппогриф Клювокрыл и дементоры. Актерский состав пополнился
+              прекрасными и, по удивительному совпадению, британскими актерами. Эмма Томпсон, Гари Олдмэн, Дэвид Тьюлис,
+              Тимоти Сполл — несравненные, но почти неузнаваемые. Сириус Блэк в исполнении Гари Олдмэна отмечен,
+              кажется,
+              всеми зрителями и кинокритиками. Сыграть одновременно
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div class="panel-heading"><span class="glyphicon glyphicon-user"></span> <span>Aleksey Kretov</span></div>
+            <div class="panel-body">
+              Серия книг о юном волшебнике Гарри Поттере, как известно, охватывает достаточно большой период жизни
+              Гарри. При этом история, параллельно взрослению героев, трансформируется из детской фэнтези-сказки в
+              приключенческий роман с элементами серьезной драмы. Соответственно, где-то в открытой Голливудом
+              кино-вселенной, в мире экранизации требовалось сделать переход «на следующий уровень». Взрослеет персонаж,
+              взрослеет его зритель, необходимо было отображать это взросление. Эпопея стартовала двумя работами Криса
+              Коламбуса, которые идеально воплощали дух детского произведения, атмосферу легкой сказочности первых книг.
+              Но в 2003 году напрашивался эволюционный шаг. В результате рядом с названием «Гарри Поттер и узник
+              Азкабана» мы видим имя Альфонсо Куарон. Режиссер в резюме которого, справедливости ради, мы все же найдем
+              достаточно сильную картину о детстве «Маленькая принцесса», непосредственно перед присоединению к проекту,
+              вспоминался совсем по другим работами. Самая яркая из которых, пожалуй «И твою маму тоже...» Тот Куарон,
+              который про исследование темы любви, отношений, чувственности. Куарон, который приглушенные тона. Куарон,
+              который в изрядной степени бесстыдство. Это был очень смелый выбор на роль режиссера третьего фильма о
+              Гарри Поттере, оправдавший себя на двести процентов. Несмотря на то, что в базе у нас написанный все тот
+              же Роулинг первоисточник, что занимался его адаптацией все тот же, работавший над предыдущими картинами,
+              Стивен Кловз, стилистика повествования изменилась до неузнаваемости. Альфонсо, что называется «переложил
+              штурвал», да так что в каютах попадало все что плохо закрепили. С первых кадров, с новой переработки уже
+              известной музыкальной темы Хэдвиг становится понятно: перед нами нечто совершенно не похожее на работы
+              Коламбуса. И хотя сказка, еще не ушла, она больше не годится для малышей. Картина получилась изрядно
+              обесцвеченной, даже мрачной: более взрослый, если хотите «злой» грим персонажей, холодная гамма, множество
+              ночных сцен — все увязано с сюжетным напряжением. Такой перемены трудно было бы добиться заменой одного
+              лишь режиссера, были и другие изменения в команде: новый оператор - Майкл Серезин, смонтировал картину
+              ранее не участвовавший в создании поттерианы, но работавший с материалами Куарона Стивен Вайсберг,
+              появились новые лица среди художников. Разумеется актерский состав никто не собирался трогать, но жизнь
+              внесла свои коррективы. Исполнитель роли Альбуса Дамблдора, директора школы Хогвартс, замечательный актер
+              Ричард Харрис скончался осенью 2002 года. Вышел не прошенный символизм: поворотный момент в серии, Гарри
+              Поттер встретил с новым Дамблдором. Харриса на площадке заменил Майкл Гэмбон.
+            </div>
+          </div>
+        </section>
+
+        <section class="film-comment-form">
+          <h2>Оставить комментарий</h2>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control input-lg" placeholder="Ваше имя">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control input-lg" placeholder="Укажите Email">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Напишите свой комментарий здесь..." rows="10"></textarea>
+            </div>
+            <button type="submit" class="film-comment-form__button btn btn-lg btn-warning">Отправить</button>
+          </form>
+        </section>
+
+      </main>
+
+
+      <aside class="left-sidebar col-lg-3 col-lg-pull-9 col-md-4 col-md-pull-8">
+
+        <div class="vertical-slder__image panel panel-info hidden-sm hidden-xs">
+          <div class="carousel slide" data-ride="carousel" id="vertical-carousel">
+
+            <ol class="carousel-indicators">
+              <li data-target="#vertical-carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#vertical-carousel" data-slide-to="1"></li>
+              <li data-target="#vertical-carousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img class="vertical-slider__image" src="assets/img/films/1263242.jpg" alt="slide">
+              </div>
+              <div class="item">
+                <img class="vertical-slider__image" src="assets/img/films/1401663.jpg" alt="slide">
+              </div>
+              <div class="item">
+                <img class="vertical-slider__image" src="assets/img/films/1289488.jpg" alt="slide">
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#vertical-carousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#vertical-carousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="site-search panel panel-info hidden-sm hidden-xs">
+          <div class="panel-heading">Поиск</div>
+          <div class="panel-body">
+            <form action="search">
+              <div class="input-group input-group-lg">
+                <input class="form-control" type="text" placeholder="Поиск по сайту">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"
+                      aria-hidden="true"></span>
+                  </button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="user-login panel panel-info hidden-sm hidden-xs">
+          <div class="panel-heading">Пользователь</div>
+          <div class="panel-body">
+            <div>
+              <!-- Nav tabs -->
+              <ul class="user-login__tabs nav nav-tabs" role="tablist">
+                <li class="active" role="presentation">
+                  <a href="#user-login-sidebar" data-toggle="tab" aria-controls="user-login-sidebar" role="tab">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="#user-registration-sidebar" data-toggle="tab" aria-controls="user-registration-sidebar"
+                    role="tab">
+                    <span class="glyphicon glyphicon-user"></span>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+
+                <div class="tab-pane fade in active" role="tabpanel" id="user-login-sidebar">
+                  <form action="login">
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="text" placeholder="Логин">
+                    </div>
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="text" placeholder="Пароль">
+                    </div>
+                    <button class="btn btn-default btn-lg btn-block">Вход</button>
+                  </form>
+                </div>
+
+
+                <div class="tab-pane fade" role="tabpanel" id="user-registration-sidebar">
+                  <form action="register">
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="text" placeholder="Логин">
+                    </div>
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="text" placeholder="Пароль">
+                    </div>
+                    <div class="form-group ">
+                      <input class="form-control input-lg" type="email" placeholder="Email">
+                    </div>
+                    <button class="btn btn-default btn-lg btn-block">Регистрация</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="site-news panel panel-info">
+          <div class="panel-heading">Новости сайта</div>
+          <div class="panel-body">
+            <div class="site-news-item">
+              <a href="#">
+                <div class="site-news-item__thumbnail thumbnail">
+                  <img class="site-news-item__image" src="assets/img/75x75.png" alt="">
+                </div>
+                <div class="site-news-item__title">
+                  <h3 class="site-news-item__link">Мы запустили новый сервис - КиноМонстр Мы запустили новый
+                    сервис
+                    - КиноМонстр</h3>
+                </div>
+              </a>
+              <div class="site-news-item_data">11 ноября 2021</div>
+            </div>
+
+            <div class="site-news-item">
+              <a href="#">
+                <div class="site-news-item__thumbnail thumbnail">
+                  <img class="site-news-item__image" src="assets/img/75x75.png" alt="">
+                </div>
+                <div class="site-news-item__title">
+                  <h3 class="site-news-item__link">Мы запустили новый сервис - КиноМонстр Мы запустили новый
+                    сервис
+                    - КиноМонстр</h3>
+                </div>
+              </a>
+              <div class="site-news-item_data">9 ноября 2021</div>
+            </div>
+
+            <div class="site-news-item">
+              <a href="#">
+                <div class="site-news-item__thumbnail thumbnail">
+                  <img class="site-news-item__image" src="assets/img/75x75.png" alt="">
+                </div>
+                <div class="site-news-item__title">
+                  <h3 class="site-news-item__link">Мы запустили новый сервис - КиноМонстр Мы запустили новый
+                    сервис
+                    - КиноМонстр</h3>
+                </div>
+              </a>
+              <div class="site-news-item_data">7 ноября 2021</div>
+            </div>
+
+            <div class="site-news-item">
+              <a href="#">
+                <div class="site-news-item__thumbnail thumbnail">
+                  <img class="site-news-item__image" src="assets/img/75x75.png" alt="">
+                </div>
+                <div class="site-news-item__title">
+                  <h3 class="site-news-item__link">Мы запустили новый сервис - КиноМонстр Мы запустили новый
+                    сервис
+                    - КиноМонстр</h3>
+                </div>
+              </a>
+              <div class="site-news-item_data">4 ноября 2021</div>
+            </div>
+
+            <div class="site-news-item">
+              <a href="#">
+                <div class="site-news-item__thumbnail thumbnail">
+                  <img class="site-news-item__image" src="assets/img/75x75.png" alt="">
+                </div>
+                <div class="site-news-item__title">
+                  <h3 class="site-news-item__link">Мы запустили новый сервис - КиноМонстр Мы запустили новый сервис
+                    - КиноМонстр</h3>
+                </div>
+              </a>
+              <div class="site-news-item_data">1 ноября 2021</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="top-films panel panel-info">
+          <div class="panel-heading">Рейтинг фильмов</div>
+          <div class="top-films__body panel-body">
+            <div class="top-films__list list-group">
+              <a class="top-films__item list-group-item" href="#">
+                Марсианин
+                <span class="top-films__badge badge">8.9</span>
+              </a>
+              <a class="top-films__item list-group-item" href="#">
+                Иллюзия обмана 2
+                <span class="top-films__badge badge">8.8</span>
+              </a>
+              <a class="top-films__item list-group-item" href="#">
+                Из машины
+                <span class="top-films__badge badge">8.5</span>
+              </a>
+              <a class="top-films__item list-group-item" href="#">
+                Люси
+                <span class="top-films__badge badge">8.2</span>
+              </a>
+              <a class="top-films__item list-group-item" href="#">
+                Выхода нет
+                <span class="top-films__badge badge">8.0</span>
+              </a>
+              <a class="top-films__item list-group-item" href="#">
+                Стражи галактики
+                <span class="top-films__badge badge">7.9</span>
+              </a>
+              <a class="top-films__item list-group-item" href="#">
+                Человек муравей
+                <span class="top-films__badge badge">7.7</span>
+              </a>
+              <a class="top-films__item list-group-item" href="#">
+                Месть от кутюр
+                <span class="top-films__badge badge">7.5</span>
+              </a>
+              <a class="top-films__item list-group-item" href="#">
+                Люди Икс
+                <span class="top-films__badge badge">8.9</span>
+              </a>
+              <a class="top-films__item list-group-item" href="#">
+                Занесло
+                <span class="top-films__badge badge">7.4</span>
+              </a>
+              <a class="top-films__item list-group-item" href="#">
+                Дочь Бога
+                <span class="top-films__badge badge">7.2</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+
+  <script src="libs/jquery/dist/jquery.min.js"></script>
+  <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
-

@@ -96,10 +96,10 @@
 .thumbnail:hover {
   transition: background-color 0.25s;
 
-  border-color: #df8a13;
-  background-color: #df8a13;
+  border-color: $color-accent;
+  background-color: $color-accent;
 
   &:hover h3 {
-    color: #ffffff;
+    color: $color-white;
   }
 }
