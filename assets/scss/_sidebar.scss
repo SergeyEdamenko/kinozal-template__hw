@@ -38,8 +38,11 @@
 $image-size: 75px;
 $image-size-with-padding: $image-size + $gap-md;
 
-.site-news-item {
-  position: relative;
+.site-news {
+  &-item {
+    position: relative;
+    clear: both;
+  }
 
   &:not(:last-child) {
     min-height: $image-size-with-padding;

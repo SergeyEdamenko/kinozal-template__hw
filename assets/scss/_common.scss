@@ -3,6 +3,7 @@
 html {
   font-size: $font-size;
 }
+
 body {
   overflow-y: scroll;
 
@@ -96,4 +97,8 @@ section {
   position: relative;
 
   overflow: hidden;
+}
+
+strong {
+  font-weight: 700;
 }
