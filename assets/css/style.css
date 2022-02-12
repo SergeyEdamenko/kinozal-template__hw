@@ -3,6 +3,8 @@
 }
 
 .navbar-inverse {
+  margin-bottom: 0;
+  border-color: transparent;
   background-color: #191919;
 }
 .navbar-inverse .navbar-nav > li > a {
@@ -34,6 +36,7 @@
   background-color: #f4f4f4;
   -webkit-box-shadow: none;
           box-shadow: none;
+  margin-bottom: 30px;
 }
 .panel-info:not(:last-of-type) {
   margin-bottom: 30px;
@@ -42,7 +45,7 @@
   margin-bottom: 0;
 }
 .panel-info > .panel-heading {
-  list-style: 0.8em;
+  letter-spacing: 0.1em;
   color: #ffffff;
   border: none;
   background-color: #df8a13;
@@ -54,19 +57,27 @@
   border-radius: 0 0 4px 4px;
 }
 
-.input-lg, .input-group-lg > .form-control {
+.btn-lg-lg, .btn-lg-group-lg > .form-control,
+.input-lg,
+.input-group-lg > .form-control {
   font-size: 0.875rem;
 }
 
-.thumbnail:hover {
+.well {
+  border-color: #d5d5d5;
+  background-color: #f4f4f4;
+}
+
+.embed-responsive {
+  border: 1px solid #d5d5d5;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.thumbnail {
   -webkit-transition: background-color 0.25s;
   -o-transition: background-color 0.25s;
   transition: background-color 0.25s;
-  border-color: #df8a13;
-  background-color: #df8a13;
-}
-.thumbnail:hover:hover h3 {
-  color: #ffffff;
 }
 
 html {
@@ -74,10 +85,10 @@ html {
 }
 
 body {
-  overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
-  max-width: 100%;
 }
 
 a {
@@ -105,8 +116,8 @@ h2 {
 h2::before {
   position: absolute;
   left: 0;
-  margin: 0.25em 0 0 0;
   width: 30px;
+  margin: 0.25em 0 0 0;
   content: "";
   border-bottom: 3px solid #f0ad4f;
 }
@@ -132,7 +143,7 @@ section {
   text-align: center;
   background-color: #232323;
   background-image: url(../img/header-bg.jpg);
-  background-position: center;
+  background-position: 50% 50%;
   background-size: cover;
 }
 .header-logo__title {
@@ -196,8 +207,8 @@ section {
 }
 .new-films-item:hover .thumbnail,
 .top-week-item:hover .thumbnail {
-  background-color: #df8a13;
   border-color: #df8a13;
+  background-color: #df8a13;
 }
 .new-films-item:hover h3,
 .top-week-item:hover h3 {
@@ -239,6 +250,27 @@ section {
   transition: color 0.25s;
 }
 
+.film-info {
+  font-size: 1.2em;
+}
+.film-info__wrapper {
+  white-space: nowrap;
+}
+.film-info__wrapper:not(:last-of-type) {
+  margin-right: 15px;
+}
+.film-info__badge {
+  font-size: 0.8em;
+}
+.film-info__well {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.film-comment-form__button {
+  float: right;
+}
+
 .left-sidebar {
   margin-bottom: 80px;
 }
@@ -272,6 +304,7 @@ section {
 
 .site-news-item {
   position: relative;
+  clear: both;
 }
 .site-news-item:not(:last-child) {
   min-height: 84.99999999px;
@@ -290,6 +323,7 @@ section {
   color: #df8a13;
 }
 .site-news-item:hover .thumbnail {
+  border-color: #df8a13;
   background-color: #df8a13;
 }
 .site-news-item__thumbnail {
@@ -318,7 +352,7 @@ section {
 .site-news-item__date {
   text-align: right;
   color: #6f6f6f;
-  font-size: 0, 8rem;
+  font-size: 0.8rem;
 }
 
 .top-films__body {
@@ -337,16 +371,16 @@ section {
 }
 .top-films__item:first-child {
   border-top: none;
-  border-radius: o;
+  border-radius: 0;
 }
 .top-films__item:last-child {
   border-bottom: none;
-  border-radius: o;
+  border-radius: 0;
 }
 .top-films__item:hover, .top-films__item:focus {
   color: #ffffff !important;
+  border-color: #df8a13;
   background-color: #df8a13 !important;
-  background-color: #df8a13;
 }
 .top-films__item:hover .badge, .top-films__item:focus .badge {
   background-color: #232323;
@@ -362,8 +396,8 @@ section {
 
 .footer {
   padding-top: 45px;
-  background-color: #232323;
   color: #d5d5d5;
+  background-color: #232323;
 }
 .footer a {
   color: #6f6f6f;
@@ -372,8 +406,8 @@ section {
   color: #ffffff;
 }
 .footer ul {
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
 @media (min-width: 576px) {
   h1 {
@@ -411,6 +445,12 @@ section {
 @media (max-width: 767.8px) {
   .navbar-inverse .navbar-nav > li > a {
     text-align: center;
+  }
+  .navbar-left {
+    margin-bottom: 0;
+  }
+  .navbar-right {
+    margin-top: 0;
   }
 }
 @media (max-width: 575.8px) {

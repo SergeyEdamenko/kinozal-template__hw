@@ -2,8 +2,9 @@
 @use "mixins" as *;
 
 .navbar-inverse {
+  margin-bottom: 0;
+
   border-color: transparent;
-  background-color: $color-deep-dark;
   background-color: $color-deep-dark;
 
   .navbar-nav {
@@ -42,6 +43,9 @@
       margin: 5px 5px 5px 0;
     }
   }
+  @include sm {
+    margin-bottom: 0;
+  }
 }
 
 .navbar-right {
@@ -51,6 +55,9 @@
     > li {
       margin: 5px 0 5px 5px;
     }
+  }
+  @include sm {
+    margin-top: 0;
   }
 }
 
@@ -64,6 +71,8 @@
   margin-right: 0;
 }
 .panel-info {
+  margin-bottom: $gap * 2;
+
   border: none;
   background-color: $color-gray-light;
   box-shadow: none;
@@ -75,7 +84,7 @@
     margin-bottom: 0;
   }
   > .panel-heading {
-    list-style: 0.8em;
+    letter-spacing: 0.1em;
 
     color: $color-white;
     border: none;
@@ -93,17 +102,6 @@
   &-lg,
   &-group-lg > .form-control {
     font-size: 0.875rem;
-  }
-}
-
-.thumbnail:hover {
-  transition: background-color 0.25s;
-
-  border-color: $color-accent;
-  background-color: $color-accent;
-
-  &:hover h3 {
-    color: $color-white;
   }
 }
 
